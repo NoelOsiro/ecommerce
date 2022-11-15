@@ -1,0 +1,35 @@
+@media(max-width:375px){
+    .navbar-toggler{
+        border:none!important;
+    }
+    .navbar-toggler:focus{
+        border:none!important;
+        box-shadow: none!important;
+    }
+    .navbar-toggler-icon{
+        background-image: url(/src/img/icon-menu.svg)!important;
+        height: 1.0rem!important;
+        width: 1.0rem !important;
+        background-position: top!important;
+    }
+    .navbar-brand{
+        padding-top: 0!important;
+        font-family: 'Kumbh Sans';
+        font-weight: bolder;
+        font-size: 28px!important;
+        margin-right: auto!important;
+    }
+    .nav-icons{
+        display: flex;
+    }
+    #cartIcon{
+        background: transparent;
+        border: none;
+        margin-right: 14px;
+    }
+    #avatarIcon{
+        margin-right: 10px;
+    }
+    
+}
+
