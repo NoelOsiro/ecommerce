@@ -13,7 +13,7 @@ const MainNav = () => {
         <Navbar.Brand href="#home">
           <img src={logo} alt='logo'/>
         </Navbar.Brand>
-        {/* <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
@@ -29,7 +29,7 @@ const MainNav = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-        </Navbar.Collapse> */}
+        </Navbar.Collapse>
         <div className='nav-icons'>     
             <button id='cartIcon'>
               <IconCart width={22} height={24} />
