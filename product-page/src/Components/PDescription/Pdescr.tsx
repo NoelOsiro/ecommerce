@@ -1,10 +1,14 @@
 import React from 'react';
-import { Container, Row, Col, Button} from 'react-bootstrap';
+import { Container, Row, Col, Button, InputGroup, Form } from 'react-bootstrap';
+import { ReactComponent as IconCart } from '../../img/icon-cart.svg';
+import { ReactComponent as IconMinus } from '../../img/icon-minus.svg';
+import { ReactComponent as IconPlus } from '../../img/icon-plus.svg';
+
 import './pdescr.css';
 
 const Pdescr = () => {
     return (
-        <Container className='mt-3'>
+        <Container className='mt-3 mb-3'>
             <Row>
                 <p className='company-header pl-3'>SNEAKER COMPANY</p>
                 <h3 className='product-title pl-3'>Fall Limited Edition Sneakers</h3>
@@ -27,10 +31,23 @@ const Pdescr = () => {
                 </Col>
             </Row>
             <Row>
-                <Col className='pl-3' sm={12}>
-                <Button size='lg'>T%his is a button Here</Button>
+                <Col className='pl-3 mt-2' sm={12}>
+                    <InputGroup className="mb-3">
+                        <InputGroup.Text>
+                            <IconMinus  />
+                        </InputGroup.Text>
+                        <Form.Control aria-label="Count" value={0} readOnly />
+                        <InputGroup.Text>
+                            <IconPlus/>
+                        </InputGroup.Text>
+                    </InputGroup>
                 </Col>
-                
+                <Col className='pl-3' sm={12}>
+                    <Button size='lg' id='AddCart'>
+                        <IconCart width={22} height={24} fill='white' />
+                        Add to cart
+                    </Button>
+                </Col>
             </Row>
         </Container>
     )

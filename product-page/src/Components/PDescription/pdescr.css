@@ -50,4 +50,35 @@
     .initial-col{
         margin: auto!important;
     }
+    #AddCart{
+        width: 100%;
+        font-family: 'Kumbh Sans';
+        font-size: 16px;
+        background-color: hsl(26, 100%, 55%)!important;
+        border: 1px solid hsl(26, 100%, 55%);
+        color: hsl(0, 0%, 100%);
+        font-weight: bold;
+    }
+    #AddCart>svg{
+        margin-right: 15px;
+    }
+    #AddCart>svg>path{
+        fill:white;
+    }
+    .input-group>span{
+        width:calc(100%/3);
+        background-color:  hsl(223, 64%, 98%);
+        border: 1px solid  hsl(223, 64%, 98%);
+    }
+    .input-group>span>svg{
+        margin: auto;
+    }
+    .input-group>input{
+        background-color:  hsl(223, 64%, 98%);
+        border: 1px solid  hsl(223, 64%, 98%);
+        text-align: center;
+        font-family: 'Kumbh Sans';
+        font-weight: bold;
+    }
 }
+
