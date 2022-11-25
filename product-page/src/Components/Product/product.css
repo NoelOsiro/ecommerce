@@ -1,0 +1,72 @@
+#product-image {
+    border-radius: 15px;
+    display: block;
+    margin: 0px auto;
+}
+
+.company-title {
+    color: hsl(26, 100%, 55%);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.price-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+}
+
+.initial-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+.discount {
+    margin: auto;
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-custom {
+    color: white;
+    background-color: hsl(26, 100%, 55%) !important;
+    text-align: center!important;
+    line-height: 28px!important;
+    font-size: 16px !important;
+    width: 85% !important;
+    border-color: hsl(26, 100%, 55%) !important;
+    -webkit-box-shadow: 0px 12px 8px 1px  hsl(25, 100%, 94%);
+    -moz-box-shadow: 0px 12px 8px 1px   hsl(25, 100%, 94%);
+    box-shadow: 0px 12px 8px 1px   hsl(25, 100%, 94%);
+}
+.btn-custom>svg{
+    margin-bottom: 3px;
+    margin-right: 6px;
+}
+.btn-custom>svg>path{
+    fill: white;
+}
+.plusminus{
+    background-color:hsl(223, 64%, 98%)!important;
+    text-align: center!important;
+    line-height: 28px!important;
+}
+.btn-group>input{
+    width: 33.3333%!important;
+    border: none;
+    text-align: center;
+    font-size:16px;
+    font-weight: bold;
+}

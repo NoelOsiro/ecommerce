@@ -1,37 +1,106 @@
-.navbar{
-    padding-top:2.8rem!important;
-    padding-bottom: 2.4rem!important;
-    border-bottom: 1px solid hsl(220, 14%, 75%); 
-    max-width: 95%; 
+.navbar {
+    padding-top: 2.8rem !important;
+    padding-bottom: 2.4rem !important;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    max-width: 95%;
     max-height: 35px;
-    margin: auto; 
-}
-.nav-link{
-    padding-top:2.8rem!important;
-    padding-bottom: 2.0rem!important;
-}
-a.nav-link{
-    cursor:pointer!important;
-    margin-bottom: 20px;
-} 
-a.nav-link:hover{
-    margin-bottom: 20px;
-    border-bottom: 2px solid hsl(26, 100%, 55%);
-    color:hsl(0,0,0)
+    margin: auto;
 }
 
-#cartButton{
-    border:none;
+.nav-link {
+    padding-top: 2.8rem !important;
+    padding-bottom: 2.0rem !important;
+    cursor: pointer !important;
+    margin-bottom: 20px;
+}
+
+a.nav-link:hover {
+    margin-bottom: 20px;
+    border-bottom: 2px solid hsl(26, 100%, 55%);
+    color: hsl(0, 0, 0)
+}
+
+#cartButton {
+    border: none;
     background: none;
     margin-right: 20px
 }
-#avatarButton{
-    border:none;
+
+#avatarButton {
+    border: none;
     background: none;
-    
-    
+
 }
-#avatarButton>img:hover{
+
+#avatarButton>img:hover {
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
+}
+
+/* Responsive css Mobile version */
+@media screen and (max-width:426px) {
+    .navbar {
+        padding-top: 0.8rem !important;
+        padding-bottom: 4.0rem !important;
+        border-bottom: 1px solid hsl(220, 14%, 75%);
+    }
+    
+    .navbar-toggler {
+        border: none !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler>svg {
+        color: black
+    }
+
+    .navbar>.container {
+        align-items: center;
+    }
+
+    .navbar-brand>img {
+        height: 25px;
+    }
+
+    .mobile-sidebar.navbar-collapse {
+        min-height: 100vh;
+        width: 300px;
+        background-color: aqua!important;
+        z-index: 1000;
+        position: absolute;
+        top: 0px;
+        left: -10px;
+        transition: -.3s ease-in-out;
+    }
+    .navbar-nav{
+        margin-top: 70px;
+    }
+
+    a.nav-link {
+        padding: 10px !important;
+        cursor: pointer !important;
+        margin-left: 1.5rem;
+        margin-bottom: 0px;
+    }
+
+    #cartButton {
+        margin-right: 5px;
+    }
+
+    #cartButton>svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #avatarButton {
+        margin-left: 0;
+    }
+
+    #avatarButton>svg {
+        width: 35px;
+        height: 35px;
+    }
 }
