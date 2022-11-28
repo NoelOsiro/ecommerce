@@ -1,0 +1,47 @@
+#cartTab {
+    width: 22rem !important;
+    position: absolute;
+    top: 84px;
+    right: 30px;
+    min-height: 15rem;
+    transition: 0.4s ease-in-out;
+    -webkit-box-shadow: -2px 6px 11px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 6px 11px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 6px 11px -2px rgba(0, 0, 0, 0.75);
+}
+
+#checkoutBtn {
+    background-color: hsl(26, 100%, 55%);
+    border-color: hsl(26, 100%, 55%) !important;
+    margin: auto;
+    width: 100%;
+}
+
+.col.col-9>p {
+    margin-bottom: 0 !important;
+    font-size: 12px;
+}
+
+.card-header {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-body {
+    text-align: center;
+    display: block;
+}
+
+.list-group-item {
+    text-align: start;
+
+}
+
+.list-group-item>div {
+    display: flex;
+}
+
+.list-group-item>div>p {
+    margin-left: 10px;
+    margin-bottom: 0 !important;
+}

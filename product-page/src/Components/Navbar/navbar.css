@@ -25,6 +25,9 @@ a.nav-link:hover {
     background: none;
     margin-right: 20px
 }
+#cartButton>img>span{
+    color:hsl(26, 100%, 55%);
+}
 
 #avatarButton {
     border: none;
