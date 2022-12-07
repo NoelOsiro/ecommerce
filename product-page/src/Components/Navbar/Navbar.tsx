@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Container, Nav, Image } from 'react-bootstrap';
 import logo from "../../img/logo.svg";
 import cartIcon from "../../img/icon-cart.svg";
-// import menuIcon from "../../img/icon-menu.svg";
+import SideBar from './SideBar';
 import avatar from "../../img/image-avatar.png";
 import "./navbar.css"
 import ListGroupWithHeaderExample from '../Cart/Card';
@@ -15,7 +15,6 @@ const MainNav: React.FC = () => {
   const { cartItems } = useCart();
   const handleToggle=()=>{
     setToggleMenu(!toggleMenu);
-    console.log(toggleMenu)
   }
   const handleToggleCart=()=>{
     setToggleCart(!toggleCart);
@@ -38,10 +37,14 @@ const MainNav: React.FC = () => {
         </div>
         
         <div>
-          <button id="cartButton" onClick={handleToggleCart}><Image src={cartIcon} /><span className="badge badge-danger">{cartItems.length}</span></button>
+          <button id="cartButton" onClick={handleToggleCart}><Image src={cartIcon} />
+          {cartItems.length>0 && <span className="badge badge-danger">{cartItems.length}</span>}
+          </button>
           <button id="avatarButton"><Image src={avatar} width={40} height={40} /></button></div>
       </Container>
       <ListGroupWithHeaderExample hidden={toggleCart}/>
+      <SideBar show={toggleMenu}
+      hide={()=>setToggleMenu(false)}/>
     </Navbar>
   );
 }

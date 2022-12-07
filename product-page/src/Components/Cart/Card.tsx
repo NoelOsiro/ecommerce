@@ -1,4 +1,5 @@
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import { ReactComponent as CartDelete }  from "../../img/icon-delete.svg";
 import { useCart } from "./CartContext";
 
 interface Iprops {
@@ -24,8 +25,8 @@ const CartItem: React.FC<ICart> = (props: ICart) => {
         </Col>
         <Col className="col-9">
           <p>{props.title}</p>
-          <p>{props.price}X{props.quantity}={cost}</p>
-          <Button onClick={props.remove}>Delete</Button>
+          <p style={{fontSize:"10"}}>${props.price}.00 X {props.quantity} <strong>${cost}.00</strong> <button id="deleteBtn" onClick={props.remove}><CartDelete/></button></p>
+          
         </Col>
       </Row>
     </li>
@@ -35,7 +36,7 @@ const CartItem: React.FC<ICart> = (props: ICart) => {
 
 
 function ListGroupWithHeaderExample(props: Iprops) {
-  const { cartItems, removeCart } = useCart();
+  const { cartItems, removeToCart } = useCart();
   if (cartItems.length > 0) {
     return (
       <Card hidden={props.hidden} id='cartTab'>
@@ -49,7 +50,7 @@ function ListGroupWithHeaderExample(props: Iprops) {
               quantity={item.quantity}
               thumb={item.thumb}
               price={item.price}
-              remove={removeCart}
+              remove={removeToCart}
             />
             ))}
         </Card.Body>
@@ -60,7 +61,9 @@ function ListGroupWithHeaderExample(props: Iprops) {
   return (
     <Card hidden={props.hidden} id='cartTab'>
       <Card.Header>Cart</Card.Header>
-      <Card.Body>Your cart is Empty</Card.Body>
+      <Card.Body>
+        <div style={{margin:"auto",paddingTop:"23%", paddingBottom:"23%"}}>Your cart is empty</div>
+      </Card.Body>
     </Card>
   )
 }

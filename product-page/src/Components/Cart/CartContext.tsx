@@ -5,12 +5,12 @@ import { ICart } from "./Card";
 export type CartContextState = {
   cartItems: ICart[];
   addToCart: (item:ICart) => void;
-  removeCart: () => void;
+  removeToCart: () => void;
 };
 const contextDefaultValues: CartContextState = {
   cartItems: [],
   addToCart: () => { },
-  removeCart: () => { }
+  removeToCart: () => { }
 };
 
 const CartStateContext = createContext<CartContextState>(contextDefaultValues);
@@ -20,8 +20,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const addToCart=(item:ICart) => {
     setCartItems(addCart(item))
   }
+  const removeToCart=() => {
+    setCartItems(removeCart)
+  }
   return (
-    <CartStateContext.Provider value={{ cartItems, addToCart, removeCart }}>
+    <CartStateContext.Provider value={{ cartItems, addToCart, removeToCart }}>
       {children}
     </CartStateContext.Provider>
   );

@@ -1,12 +1,11 @@
 .navbar {
     padding-top: 2.8rem !important;
     padding-bottom: 2.4rem !important;
-    border-bottom: 1px solid hsl(220, 14%, 75%);
+    border-bottom: 1px solid hsl(0, 0%, 100%);
     max-width: 95%;
     max-height: 35px;
     margin: auto;
 }
-
 .nav-link {
     padding-top: 2.8rem !important;
     padding-bottom: 2.0rem !important;
@@ -39,6 +38,17 @@ a.nav-link:hover {
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
 }
+.badge{
+    background-color:  hsla(26, 100%, 55%, 0.582);
+    border-radius: 40%;
+    color:white!important;
+    top: 18px;
+    position: absolute!important;
+    right:90px;
+    margin-right: 16px;
+    font-size: small;
+    font-weight: bold;
+}
 
 /* Responsive css Mobile version */
 @media screen and (max-width:426px) {
@@ -68,16 +78,7 @@ a.nav-link:hover {
         height: 25px;
     }
 
-    .mobile-sidebar.navbar-collapse {
-        min-height: 100vh;
-        width: 300px;
-        background-color: aqua!important;
-        z-index: 1000;
-        position: absolute;
-        top: 0px;
-        left: -10px;
-        transition: -.3s ease-in-out;
-    }
+    
     .navbar-nav{
         margin-top: 70px;
     }
@@ -97,6 +98,13 @@ a.nav-link:hover {
         width: 20px;
         height: 20px;
     }
+    .badge{
+        top: 6px;
+        right: 43px;
+        width: 18px;
+        height: 18px;
+        padding: 3px!important;
+    }
 
     #avatarButton {
         margin-left: 0;
@@ -106,4 +114,23 @@ a.nav-link:hover {
         width: 35px;
         height: 35px;
     }
+}
+.sidebar{
+    position: absolute;
+    background-color: white;
+    width: 230px;
+    min-height: 100vh;
+    padding: 15px;
+    top: 0;
+    transition: 0.6s ease-in-out;
+}
+.sidebar_urls{margin-top: 6rem;}
+.sidebar_urls>ul{
+    list-style: none;
+}
+.siderBarLink{
+    padding: 10px;
+}
+.siderBarLink:hover{
+    border-bottom: 2px solid hsl(26, 100%, 55%);
 }
